@@ -486,6 +486,6 @@ class __TwigTemplate_a8f0d4c6427ef580ebf8c563ee1b66c692f8aca3fe57445e48ffc2bb052
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

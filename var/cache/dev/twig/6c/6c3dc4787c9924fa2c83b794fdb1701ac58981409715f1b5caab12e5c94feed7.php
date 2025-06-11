@@ -238,6 +238,6 @@ class __TwigTemplate_a3877b6ae09ef6100471bc5087ece632ef4fab3edb4fa721eba6f41f0fb
         </div>
     </form>
 </div>
-", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\search.html.twig");
+", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\search.html.twig");
     }
 }

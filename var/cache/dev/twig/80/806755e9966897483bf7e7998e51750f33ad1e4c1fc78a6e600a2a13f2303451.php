@@ -182,6 +182,6 @@ class __TwigTemplate_11190b8212bba0a785fc8095539b172797f316505691878e4c32bfc2010
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\explain.html.twig");
     }
 }

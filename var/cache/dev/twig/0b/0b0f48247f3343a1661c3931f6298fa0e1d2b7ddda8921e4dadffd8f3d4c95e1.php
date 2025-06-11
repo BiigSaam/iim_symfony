@@ -206,6 +206,6 @@ class __TwigTemplate_57e7d471970ae2b9fedb41c4a035909a226787b352484cbfd51d24dc7ac
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\templates\\base.html.twig");
     }
 }

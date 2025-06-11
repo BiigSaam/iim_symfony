@@ -6,7 +6,13 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Entity\\Notification' => $baseDir . '/src/Entity/Notification.php',
+    'App\\Entity\\Produit' => $baseDir . '/src/Entity/Produit.php',
+    'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\NotificationRepository' => $baseDir . '/src/Repository/NotificationRepository.php',
+    'App\\Repository\\ProduitRepository' => $baseDir . '/src/Repository/ProduitRepository.php',
+    'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'CURLStringFile' => $vendorDir . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
     'Collator' => $vendorDir . '/symfony/intl/Resources/stubs/Collator.php',

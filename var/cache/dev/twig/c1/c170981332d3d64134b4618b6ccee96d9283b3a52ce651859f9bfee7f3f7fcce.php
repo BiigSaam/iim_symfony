@@ -1850,6 +1850,6 @@ class __TwigTemplate_8a731223423dcb8421691ceb6b4de1a1d7a5711fad10e8e043a2dc19eff
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\db.html.twig");
     }
 }

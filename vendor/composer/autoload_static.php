@@ -595,7 +595,13 @@ class ComposerStaticInitfd0115627e097aebd3ce530b8a36e4bb
     );
 
     public static $classMap = array (
+        'App\\Entity\\Notification' => __DIR__ . '/../..' . '/src/Entity/Notification.php',
+        'App\\Entity\\Produit' => __DIR__ . '/../..' . '/src/Entity/Produit.php',
+        'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\NotificationRepository' => __DIR__ . '/../..' . '/src/Repository/NotificationRepository.php',
+        'App\\Repository\\ProduitRepository' => __DIR__ . '/../..' . '/src/Repository/ProduitRepository.php',
+        'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',

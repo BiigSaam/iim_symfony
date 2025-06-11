@@ -975,6 +975,6 @@ class __TwigTemplate_f09ee0e4c59dc78b3358a61f7254df3dba3265e3a1fd6c7dafd07d2a2f0
         </td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\doctrine\\doctrine-migrations-bundle\\templates\\Collector\\migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\doctrine\\doctrine-migrations-bundle\\templates\\Collector\\migrations.html.twig");
     }
 }

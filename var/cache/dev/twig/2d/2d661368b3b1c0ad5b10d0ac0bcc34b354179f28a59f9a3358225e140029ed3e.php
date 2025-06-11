@@ -80,6 +80,6 @@ class __TwigTemplate_9b4a00edef7f58aa9cb09c24aac578e56bd15611571fa70dafd27d5515a
     <path d=\"M4 6v6a8 3 0 0 0 16 0v-6\"></path>
     <path d=\"M4 12v6a8 3 0 0 0 16 0v-6\"></path>
 </svg>
-", "@Doctrine/Collector/database.svg", "C:\\Users\\Absam\\Documents\\ecommerce_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\database.svg");
+", "@Doctrine/Collector/database.svg", "C:\\Users\\Absam\\Documents\\iim_symfony\\vendor\\doctrine\\doctrine-bundle\\templates\\Collector\\database.svg");
     }
 }
