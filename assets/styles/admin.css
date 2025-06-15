@@ -1,0 +1,76 @@
+.admin-dashboard {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.admin-dashboard p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.admin-dashboard ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.admin-dashboard li {
+    margin-bottom: 12px;
+}
+
+.admin-dashboard .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.admin-dashboard .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-dashboard .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.admin-dashboard .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.admin-dashboard .btn-secondary:hover {
+    background-color: #565e64;
+}
+
+.admin-dashboard .btn-outline-dark {
+    border: 2px solid #343a40;
+    color: #343a40;
+    background-color: orange;
+}
+
+.admin-dashboard .btn-outline-dark:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.admin-dashboard .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.admin-dashboard .btn-danger:hover {
+    background-color: #b02a37;
+}

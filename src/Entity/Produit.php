@@ -2,10 +2,26 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
+ * @ApiResource(
+ *    normalizationContext={"groups"={"produit:read"}},
+ *    denormalizationContext={"groups"={"produit:write"}},
+ *    collectionOperations={
+ *         "get"={
+ *             "security"="is_granted('ROLE_ADMIN')",
+ *             "provider"=App\Api\Provider\ProduitCollectionProvider::class
+ *         }
+ *     },
+ *     itemOperations={"get"}
+ * )
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
  */
 class Produit
@@ -14,42 +30,50 @@ class Produit
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"produit:read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"produit:read"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"produit:read"})
      */
     private $prix;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Groups({"produit:read"})
      */
     private $category;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"produit:read"})
      */
     private $description;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class)
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"produit:read"})
      */
     private $user;
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Groups({"produit:read"})
      */
     private $created_at;
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Groups({"produit:read"})
      */
     private $updated_at;
 

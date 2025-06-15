@@ -7,7 +7,7 @@
         {% if app.user %}
             <a href="{{ path('app_panier') }}">Panier</a>
             <a href="{{ path('app_profile') }}">Mon profil</a>
-            <a href="{{ path('app_logout') }}" class="login-link">Déconnexion</a>
+            <a href="{{ path('app_logout') }}" class="logout-link">Déconnexion</a>
         {% else %}
             <a href="{{ path('app_login') }}" class="login-link">Connexion</a>
         {% endif %}
@@ -26,7 +26,7 @@
 
                     {% if app.user %}
                         {% if app.user.actif and app.user.points >= produit.prix %}
-                            <a href="{{ path('app_panier_ajouter', { id: produit.id }) }}" class="btn btn-success mt-2">Ajouter au panier</a>
+                            <a href="{{ path('app_panier_ajouter', { id: produit.id }) }}" class="btn btn-success mt-2 custom-panier-button">Ajouter au panier</a>
                         {% elseif not app.user.actif %}
                             <p class="text-danger">Compte bloqué</p>
                         {% else %}

@@ -4,7 +4,7 @@
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: green;
+    background-color: lightgray;
 }
 
 .login-title {
@@ -24,6 +24,18 @@
     box-sizing: border-box;
 }
 
-.login-form .btn-primary {
+.login-form .login-button {
     width: 100%;
+}
+
+button.login-button {
+    background-color: green;
+    color: white;
+    text-decoration: none
+}
+
+button.login-button:hover {
+    background-color: lightgreen;
+    color: blue;
+    text-decoration: none;
 }

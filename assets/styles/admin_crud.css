@@ -28,6 +28,25 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.add-points-btn {
+    background-color: #0d6efd !important; /* couleur bleue vive */
+    color: white !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px !important;
+    display: inline-block !important;
+    transition: background-color 0.3s ease;
+}
+
+.add-points-btn:hover {
+    background-color: #084dbd !important;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;

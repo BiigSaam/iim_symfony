@@ -4,6 +4,7 @@
 
 {% block body %}
     <div class="container">
+        <a href="{{ path('app_home') }}" class="btn return-button">← Retour à l'accueil</a>
         <h1>Mon profil</h1>
 
         {% if not user.actif %}
