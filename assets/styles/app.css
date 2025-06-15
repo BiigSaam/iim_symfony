@@ -1,0 +1,11 @@
+@import './profile.css';
+@import './home.css';
+@import './login.css';
+@import './admin_crud.css';
+
+
+body {
+    background-color: skyblue;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

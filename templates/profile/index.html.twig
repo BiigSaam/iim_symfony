@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Mon profil</h1>
+
+        {% if not user.actif %}
+            <div class="alert alert-warning">
+                ⚠️ Votre compte est désactivé. Vous ne pouvez pas effectuer d’achats.
+            </div>
+        {% endif %}
+
+
+        <ul>
+            <li>Email : {{ user.email }}</li>
+            <li>Nom : {{ user.nom }}</li>
+            <li>Prénom : {{ user.prenom }}</li>
+            <li>Actif : {{ user.actif ? 'Oui' : 'Non' }}</li>
+            <li>Points : {{ user.points }}</li>
+        </ul>
+
+        <h2>Modifier mes informations</h2>
+        {{ form_start(form) }}
+            {{ form_row(form.nom) }}
+            {{ form_row(form.prenom) }}
+            <button class="btn btn-primary">Mettre à jour</button>
+        {{ form_end(form) }}
+
+        <div style="margin-top: 20px;">
+            <a href="{{ path('app_logout') }}" class="btn btn-secondary">Se déconnecter</a>
+
+            {% if 'ROLE_ADMIN' in user.roles %}
+                <a href="{{ path('app_admin') }}" class="btn btn-warning">Backoffice</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

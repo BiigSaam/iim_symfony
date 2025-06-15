@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     /**
      * @ORM\Id
@@ -18,7 +20,7 @@ class User
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
 
@@ -91,9 +93,11 @@ class User
         return $this;
     }
 
-    public function getRoles(): ?array
+    public function getRoles(): array
     {
-        return $this->roles;
+        $roles = $this->roles;
+        $roles[] = 'ROLE_USER'; // garantit qu'il a toujours au moins ce rôle
+        return array_unique($roles);
     }
 
     public function setRoles(array $roles): self
@@ -174,4 +178,30 @@ class User
 
         return $this;
     }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->email;
+    }
+
+    public function eraseCredentials(): void
+    {
+        // À utiliser si on stocke des données sensibles temporaires
+    }
+
+    public function getUsername(): string
+    {
+        return $this->getUserIdentifier(); // Compatibilité avec anciennes versions
+    }
+
+    public function getSalt(): ?string
+    {
+        return null; // Pas nécessaire avec bcrypt/argon2i
+    }
+
+    public function __toString(): string
+    {
+        return $this->prenom . ' ' . $this->nom;
+    }
+
 }

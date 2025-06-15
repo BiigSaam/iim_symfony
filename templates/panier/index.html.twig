@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Panier{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Mon Panier</h1>
+
+        {% if produits is empty %}
+            <p>Votre panier est vide.</p>
+        {% else %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prix (points)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% set total = 0 %}
+                    {% for produit in produits %}
+                        <tr>
+                            <td>{{ produit.nom }}</td>
+                            <td>{{ produit.prix }}</td>
+                            <td>
+                                <a href="{{ path('app_panier_supprimer', { id: produit.id }) }}" class="btn btn-danger btn-sm">Retirer</a>
+                            </td>
+                        </tr>
+                        {% set total = total + produit.prix %}
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h4>Total : {{ total }} points</h4>
+
+            {% if app.user and app.user.actif and app.user.points >= total %}
+                <a href="{{ path('app_panier_valider') }}" class="btn btn-success">Valider l’achat</a>
+            {% else %}
+                <p class="text-danger">Vous devez être actif et avoir assez de points pour valider l’achat.</p>
+            {% endif %}
+        {% endif %}
+        
+        <a href="{{ path('app_home') }}" class="btn btn-secondary mt-3">← Retour à l'accueil</a>
+    </div>
+{% endblock %}

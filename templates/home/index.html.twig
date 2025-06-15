@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="home-header">
+        {% if app.user %}
+            <a href="{{ path('app_panier') }}">Panier</a>
+            <a href="{{ path('app_profile') }}">Mon profil</a>
+            <a href="{{ path('app_logout') }}" class="login-link">Déconnexion</a>
+        {% else %}
+            <a href="{{ path('app_login') }}" class="login-link">Connexion</a>
+        {% endif %}
+    </div>
+
+    <div class="home-container">
+        <h1>Bienvenue chez SymfonyShop !</h1>
+        <h2>Nos Produits</h2>
+        <div class="product-grid">
+            {% for produit in produits %}
+                <div class="product-card">
+                    <a href="{{ path('product_show', { id: produit.id }) }}">
+                        <h3>{{ produit.nom }}</h3>
+                        <p class="prix">{{ produit.prix }} points</p>
+                    </a>
+
+                    {% if app.user %}
+                        {% if app.user.actif and app.user.points >= produit.prix %}
+                            <a href="{{ path('app_panier_ajouter', { id: produit.id }) }}" class="btn btn-success mt-2">Ajouter au panier</a>
+                        {% elseif not app.user.actif %}
+                            <p class="text-danger">Compte bloqué</p>
+                        {% else %}
+                            <p class="text-danger">Pas assez de points</p>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% else %}
+                <p>Aucun produit disponible.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ produit.nom }}{% endblock %}
+
+{% block body %}
+    <div class="product-detail">
+        <h1>{{ produit.nom }}</h1>
+        <p><strong>Prix :</strong> {{ produit.prix }} points</p>
+        <p><strong>Description :</strong> {{ produit.description }}</p>
+        <p><strong>Catégorie :</strong> {{ produit.category }}</p>
+
+        {% if app.user %}
+            {% if app.user.actif and app.user.points >= produit.prix %}
+                <a href="{{ path('app_panier_ajouter', { id: produit.id }) }}" class="btn btn-success mt-2">Ajouter au panier</a>
+            {% elseif not app.user.actif %}
+                <p class="text-danger">Compte bloqué</p>
+            {% else %}
+                <p class="text-danger">Pas assez de points</p>
+            {% endif %}
+        {% endif %}
+        <a href="{{ path('app_home') }}">← Retour à l'accueil</a>
+    </div>
+{% endblock %}
